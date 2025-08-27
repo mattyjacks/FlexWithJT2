@@ -39,6 +39,9 @@ export default function Home() {
             <Link href="#packages" className="hover:text-primary transition-colors">Packages</Link>
             <Link href="#testimonials" className="hover:text-primary transition-colors">Testimonials</Link>
             <Link href="#contact" className="hover:text-primary transition-colors">Contact</Link>
+            <Link href="/next" className="inline-flex items-center gap-2 rounded-full border px-3 py-1 hover:bg-accent transition-colors">
+              Flex Next <span className="text-[10px] rounded bg-amber-500/20 px-1.5 py-0.5 text-amber-700">Coming Soon</span>
+            </Link>
           </div>
           <div className="flex items-center gap-3">
             <a
@@ -48,6 +51,9 @@ export default function Home() {
               Book Free Consult
               <ArrowRight className="h-4 w-4" />
             </a>
+            <Link href="/next" className="md:hidden inline-flex items-center gap-2 rounded-full border px-3 py-2 text-sm hover:bg-accent transition" aria-label="Flex Next mobile link">
+              Flex Next <span className="text-[10px] rounded bg-amber-500/20 px-1.5 py-0.5 text-amber-700">Soon</span>
+            </Link>
             <ThemeSwitcher />
           </div>
         </div>
@@ -55,6 +61,15 @@ export default function Home() {
 
       {/* Hero */}
       <section className="relative mx-auto max-w-6xl px-6 pt-16 pb-20 sm:pt-24 sm:pb-28">
+        <div className="absolute inset-0 -z-10">
+          <img
+            src="https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            alt="Fitness training background"
+            className="h-full w-full object-cover opacity-15"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/70 to-background" />
+        </div>
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs text-muted-foreground">
             <MapPin className="h-3.5 w-3.5 text-primary" /> Boston, MA
@@ -79,11 +94,29 @@ export default function Home() {
             >
               <Phone className="h-4 w-4" /> Call (617) 555-0123
             </a>
+            <Link
+              href="/next"
+              className="inline-flex items-center gap-2 rounded-md border px-5 py-3 font-medium hover:bg-accent transition"
+              aria-label="Explore Flex Next platform (coming soon)"
+            >
+              Explore Flex Next <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
           <div className="mt-8 flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
             <div className="inline-flex items-center gap-2"><Trophy className="h-4 w-4 text-primary" /> 8+ years helping Bostonians get results</div>
             <div className="inline-flex items-center gap-2"><Clock className="h-4 w-4 text-primary" /> Flexible scheduling: early, mid-day, evenings</div>
           </div>
+        </div>
+
+        {/* Flex Next promo */}
+        <div className="mt-8 rounded-xl border p-6 sm:flex sm:items-center sm:justify-between">
+          <div>
+            <h3 className="font-semibold">Flex Next — The Training Platform</h3>
+            <p className="mt-1 text-sm text-muted-foreground">Buy training videos, chat with trainers, join the community, and more. <span className="text-amber-600">Coming soon.</span></p>
+          </div>
+          <Link href="/next" className="mt-4 inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-primary-foreground sm:mt-0">
+            Learn about Flex Next <ArrowRight className="h-4 w-4" /> <span className="text-[10px] rounded bg-amber-500/20 px-1.5 py-0.5 text-amber-700">Coming Soon</span>
+          </Link>
         </div>
       </section>
 
@@ -143,12 +176,15 @@ export default function Home() {
         <div className="grid gap-10 md:grid-cols-2 md:gap-12">
           <div className="animate-in fade-in slide-in-from-left-4 duration-700">
             <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">About JT</h2>
-            <p className="mt-3 text-muted-foreground">Hi, I&#39;m JT, and I&#39;ve been passionate about fitness and helping others achieve their goals for over 8 years. My journey began as a college athlete at Boston University, where I discovered the transformative power of proper training and nutrition.</p>
+            <p className="mt-3 text-muted-foreground">Hi, I&#39;m JT, and I&#39;ve been passionate about fitness and helping others achieve their goals for over 8 years. My journey began as a college athlete at Boston University, where I discovered the transformative power of proper training and nutrition. Curious about my upcoming platform? <Link href="/next" className="underline underline-offset-4">Explore Flex Next</Link> <span className="text-xs text-amber-600">(coming soon)</span>.</p>
             <h3 className="mt-6 font-semibold">My Philosophy</h3>
             <p className="mt-2 text-muted-foreground">Fitness should be sustainable, enjoyable, and tailored to your unique lifestyle. I create personalized programs that consider your goals, schedule, preferences, and any physical limitations.</p>
           </div>
           <div className="animate-in fade-in slide-in-from-right-4 duration-700">
-            <div className="rounded-xl border p-6">
+            <div className="overflow-hidden rounded-xl border">
+              <img src="https://images.pexels.com/photos/4753899/pexels-photo-4753899.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="JT training session in Boston" className="h-56 w-full object-cover" loading="lazy" />
+            </div>
+            <div className="mt-6 rounded-xl border p-6">
               <h3 className="font-semibold">Education & Certifications</h3>
               <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2"><span className="mt-[2px] h-1.5 w-1.5 rounded-full bg-primary" /> Bachelor&#39;s in Exercise Science — Boston University</li>
@@ -241,12 +277,22 @@ export default function Home() {
         <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">What Clients Say</h2>
         <div className="mt-8 grid gap-6 md:grid-cols-2">
           <div className="rounded-xl border p-6">
-            <p className="text-lg">“JT helped me lose 30 pounds and gain confidence I never had. His approach is both challenging and supportive.”</p>
-            <p className="mt-3 text-sm text-muted-foreground">— Boston client</p>
+            <div className="flex items-start gap-4">
+              <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&crop=faces" alt="Client headshot" className="h-12 w-12 rounded-full object-cover" loading="lazy" />
+              <div>
+                <p className="text-lg">“JT helped me lose 30 pounds and gain confidence I never had. His approach is both challenging and supportive.”</p>
+                <p className="mt-3 text-sm text-muted-foreground">— Sam R., Back Bay</p>
+              </div>
+            </div>
           </div>
           <div className="rounded-xl border p-6">
-            <p className="text-lg">“After working with JT for 6 months, I completed my first Boston Marathon. His training methods are incredible.”</p>
-            <p className="mt-3 text-sm text-muted-foreground">— Marathon trainee</p>
+            <div className="flex items-start gap-4">
+              <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&crop=faces" alt="Client headshot" className="h-12 w-12 rounded-full object-cover" loading="lazy" />
+              <div>
+                <p className="text-lg">“After working with JT for 6 months, I completed my first Boston Marathon. His training methods are incredible.”</p>
+                <p className="mt-3 text-sm text-muted-foreground">— Alina M., South End</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -256,14 +302,17 @@ export default function Home() {
         <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Fitness Tips from JT</h2>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           <article className="rounded-xl border p-6">
+            <img src="https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Kettlebell training" className="mb-3 h-40 w-full rounded-md object-cover" loading="lazy" />
             <h3 className="font-semibold">Master the Kettlebell Swing</h3>
             <p className="mt-2 text-sm text-muted-foreground">Engage your posterior chain, build power, and burn serious calories. Start light, hinge at the hips, and let the bell float to chest height.</p>
           </article>
           <article className="rounded-xl border p-6">
+            <img src="https://images.pexels.com/photos/1199590/pexels-photo-1199590.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Running along the Charles River" className="mb-3 h-40 w-full rounded-md object-cover" loading="lazy" />
             <h3 className="font-semibold">Running in Boston</h3>
             <p className="mt-2 text-sm text-muted-foreground">From the Charles River Esplanade to hill repeats in Beacon Hill—build endurance smartly and enjoy the city as your training ground.</p>
           </article>
           <article className="rounded-xl border p-6">
+            <img src="https://images.pexels.com/photos/416778/pexels-photo-416778.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Barbell strength training" className="mb-3 h-40 w-full rounded-md object-cover" loading="lazy" />
             <h3 className="font-semibold">Strength Training Basics</h3>
             <p className="mt-2 text-sm text-muted-foreground">Focus on squat, hinge, push, pull, lunge, and carry. Progress gradually and fuel with enough protein for steady gains.</p>
           </article>
@@ -286,6 +335,7 @@ export default function Home() {
               <a href="mailto:jt@jtfitness.com?subject=I%20want%20to%20get%20started" className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-primary-foreground text-sm font-medium hover:opacity-90 transition"><Mail className="h-4 w-4" /> Email JT</a>
               <a href="tel:+16175550123" className="inline-flex items-center gap-2 rounded-md border px-4 py-2 text-sm font-medium hover:bg-accent transition"><Phone className="h-4 w-4" /> Call Now</a>
               <a href="#packages" className="inline-flex items-center gap-2 rounded-md border px-4 py-2 text-sm font-medium hover:bg-accent transition">View Packages <ArrowRight className="h-4 w-4" /></a>
+              <Link href="/next" className="inline-flex items-center gap-2 rounded-md border px-4 py-2 text-sm font-medium hover:bg-accent transition">Flex Next (Coming Soon) <ArrowRight className="h-4 w-4" /></Link>
             </div>
           </div>
           <div className="rounded-xl border p-6">
@@ -309,6 +359,7 @@ export default function Home() {
           <p>© {new Date().getFullYear()} Flex With JT · Boston, MA</p>
           <div className="flex items-center gap-6">
             <a href="#home" className="hover:text-primary transition-colors">Back to top</a>
+            <Link href="/next" className="hover:text-primary transition-colors">Flex Next</Link>
             <ThemeSwitcher />
           </div>
         </div>
