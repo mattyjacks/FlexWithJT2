@@ -65,7 +65,7 @@ export default function Home() {
           <img
             src="https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt="Fitness training background"
-            className="h-full w-full object-cover opacity-15"
+            className="h-full w-full object-cover opacity-20"
             loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/70 to-background" />
@@ -75,10 +75,10 @@ export default function Home() {
             <MapPin className="h-3.5 w-3.5 text-primary" /> Boston, MA
           </div>
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
-            Transform Your Body, Transform Your Life
+            Best Body = Best Life
           </h1>
           <p className="mt-4 max-w-2xl text-muted-foreground">
-            Professional personal training in the heart of Boston. Get fit, stay motivated, and achieve your goals with JT&#39;s proven methods.
+            Professional personal training in the heart of Boston. Get fit, stay motivated, and achieve your goals with JT&#39;s proven methods. 💪🔥
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a
@@ -211,10 +211,67 @@ export default function Home() {
         <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Training Packages</h2>
         <p className="mt-2 max-w-2xl text-muted-foreground">Choose the plan that fits your goals and schedule. Every session is 1:1 and tailored to you.</p>
 
+        {/* Trainer Tiers & Pricing */}
+        <div className="mt-6">
+          <h3 className="text-xl font-semibold flex items-center gap-2">Trainer Tiers & Pricing 🏅</h3>
+          <p className="mt-2 text-sm text-muted-foreground">Pick your coach level. <span className="font-medium">JT</span> is a <span className="font-semibold">Luxury</span> trainer and can connect you with other coaches across Boston.</p>
+          <div className="mt-4 grid gap-6 md:grid-cols-3">
+            {/* Effective Tier */}
+            <div className="rounded-xl border p-6">
+              <div className="flex items-center justify-between">
+                <h4 className="font-semibold">Effective 💪</h4>
+                <span className="rounded-full bg-muted/40 px-2 py-0.5 text-xs">Great Value</span>
+              </div>
+              <ul className="mt-4 space-y-2 text-sm">
+                <li className="flex items-center justify-between"><span>Per Session</span><span className="font-semibold">$90</span></li>
+                <li className="flex items-center justify-between"><span>4-Pack</span><span className="font-semibold">$340</span></li>
+                <li className="flex items-center justify-between"><span>8-Pack</span><span className="font-semibold">$640</span></li>
+              </ul>
+              <a href="mailto:jt@jtfitness.com?subject=Effective%20Tier%20Inquiry" className="mt-5 inline-flex items-center gap-2 rounded-md border px-4 py-2 text-sm font-medium hover:bg-accent transition">Request Match 👉</a>
+            </div>
+
+            {/* Luxury Tier (JT) */}
+            <div className="rounded-xl border p-6">
+              <div className="flex items-center justify-between">
+                <h4 className="font-semibold">Luxury 🏆</h4>
+                <span className="rounded-full bg-primary/10 px-2 py-0.5 text-xs text-primary">JT&#39;s Tier</span>
+              </div>
+              <ul className="mt-4 space-y-2 text-sm">
+                <li className="flex items-center justify-between"><span>Per Session</span><span className="font-semibold">$140</span></li>
+                <li className="flex items-center justify-between"><span>4-Pack</span><span className="font-semibold">$540</span></li>
+                <li className="flex items-center justify-between"><span>8-Pack</span><span className="font-semibold">$1,040</span></li>
+              </ul>
+              <a href="mailto:jt@jtfitness.com?subject=Luxury%20Tier%20Inquiry%20(JT)" className="mt-5 inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-primary-foreground text-sm font-medium hover:opacity-90 transition">Book JT ✉️</a>
+            </div>
+
+            {/* Celebrity Tier */}
+            <div className="rounded-xl border p-6">
+              <div className="flex items-center justify-between">
+                <h4 className="font-semibold">Celebrity 👑</h4>
+                <span className="rounded-full bg-amber-500/20 px-2 py-0.5 text-xs text-amber-700">High Demand</span>
+              </div>
+              <ul className="mt-4 space-y-2 text-sm">
+                <li className="flex items-center justify-between"><span>Per Session</span><span className="font-semibold">$220</span></li>
+                <li className="flex items-center justify-between"><span>4-Pack</span><span className="font-semibold">$860</span></li>
+                <li className="flex items-center justify-between"><span>8-Pack</span><span className="font-semibold">$1,680</span></li>
+              </ul>
+              <a href="mailto:jt@jtfitness.com?subject=Celebrity%20Tier%20Inquiry" className="mt-5 inline-flex items-center gap-2 rounded-md border px-4 py-2 text-sm font-medium hover:bg-accent transition">Request Match ✨</a>
+            </div>
+          </div>
+          <div className="mt-4 rounded-lg border p-4 text-sm text-muted-foreground bg-muted/30">
+            🤝 JT works with a network of Boston trainers — some are 👑 celebrity-level, most are 💪 effective and budget-friendly. Tell us your goals and we&#39;ll match you with the right coach.
+          </div>
+        </div>
+
         <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {/* Single Session */}
           <div className="group rounded-xl border p-6 transition hover:shadow-lg">
             <h3 className="text-lg font-semibold">Single Session</h3>
+            <div className="mt-2 grid grid-cols-3 gap-2 text-center text-xs font-medium">
+              <div className="rounded-md bg-muted/30 px-2 py-1">💪 $90</div>
+              <div className="rounded-md bg-primary/10 px-2 py-1 text-primary">🏆 $140</div>
+              <div className="rounded-md bg-muted/30 px-2 py-1">👑 $220</div>
+            </div>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
               <li className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-primary" /> 60-minute personal training session</li>
               <li className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-primary" /> Customized workout plan</li>
@@ -227,6 +284,11 @@ export default function Home() {
           {/* 4-Session Package */}
           <div className="group rounded-xl border p-6 transition hover:shadow-lg">
             <h3 className="text-lg font-semibold">4-Session Package</h3>
+            <div className="mt-2 grid grid-cols-3 gap-2 text-center text-xs font-medium">
+              <div className="rounded-md bg-muted/30 px-2 py-1">💪 $340</div>
+              <div className="rounded-md bg-primary/10 px-2 py-1 text-primary">🏆 $540</div>
+              <div className="rounded-md bg-muted/30 px-2 py-1">👑 $860</div>
+            </div>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
               <li className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-primary" /> Four 60-minute training sessions</li>
               <li className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-primary" /> Comprehensive fitness assessment</li>
@@ -240,6 +302,11 @@ export default function Home() {
           {/* 8-Session Package */}
           <div className="group rounded-xl border p-6 transition hover:shadow-lg">
             <h3 className="text-lg font-semibold">8-Session Package</h3>
+            <div className="mt-2 grid grid-cols-3 gap-2 text-center text-xs font-medium">
+              <div className="rounded-md bg-muted/30 px-2 py-1">💪 $640</div>
+              <div className="rounded-md bg-primary/10 px-2 py-1 text-primary">🏆 $1,040</div>
+              <div className="rounded-md bg-muted/30 px-2 py-1">👑 $1,680</div>
+            </div>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
               <li className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-primary" /> Eight 60-minute training sessions</li>
               <li className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-primary" /> Complete body composition analysis</li>
@@ -255,21 +322,52 @@ export default function Home() {
         {/* Additional Services */}
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           <div className="rounded-xl border p-6">
-            <h4 className="font-semibold">Nutrition Consultation</h4>
+            <h4 className="font-semibold">Nutrition Consultation 🥗</h4>
             <p className="mt-2 text-sm text-muted-foreground">60-minute deep dive into your eating habits with personalized meal planning</p>
             <p className="mt-3 text-sm font-medium">$120</p>
           </div>
           <div className="rounded-xl border p-6">
-            <h4 className="font-semibold">Group Training</h4>
+            <h4 className="font-semibold">Group Training 👯‍♂️</h4>
             <p className="mt-2 text-sm text-muted-foreground">Small group sessions (2–4 people) for friends or family</p>
             <p className="mt-3 text-sm font-medium">$50 per person</p>
           </div>
           <div className="rounded-xl border p-6">
-            <h4 className="font-semibold">Virtual Training</h4>
+            <h4 className="font-semibold">Virtual Training 💻</h4>
             <p className="mt-2 text-sm text-muted-foreground">Online training sessions via video call</p>
             <p className="mt-3 text-sm font-medium">$60 per session</p>
           </div>
+          <div className="rounded-xl border p-6">
+            <h4 className="font-semibold">In‑Home Personal Training 🏠</h4>
+            <p className="mt-2 text-sm text-muted-foreground">We come to you with equipment within Boston core</p>
+            <p className="mt-3 text-sm font-medium">$160 per session</p>
+          </div>
+          <div className="rounded-xl border p-6">
+            <h4 className="font-semibold">Outdoor Bootcamp 🌳</h4>
+            <p className="mt-2 text-sm text-muted-foreground">Esplanade / Boston Common group workout (45–60 min)</p>
+            <p className="mt-3 text-sm font-medium">$35 per person (min 5)</p>
+          </div>
+          <div className="rounded-xl border p-6">
+            <h4 className="font-semibold">Corporate Wellness 💼</h4>
+            <p className="mt-2 text-sm text-muted-foreground">On‑site 60‑min seminar or team workout</p>
+            <p className="mt-3 text-sm font-medium">$400 per session</p>
+          </div>
+          <div className="rounded-xl border p-6">
+            <h4 className="font-semibold">Mobility & Posture 🧘</h4>
+            <p className="mt-2 text-sm text-muted-foreground">Target tight hips/shoulders and daily pain relief</p>
+            <p className="mt-3 text-sm font-medium">$95 for 45 min</p>
+          </div>
+          <div className="rounded-xl border p-6">
+            <h4 className="font-semibold">Marathon Coaching 🏃‍♂️</h4>
+            <p className="mt-2 text-sm text-muted-foreground">12‑week running plan + weekly check‑ins</p>
+            <p className="mt-3 text-sm font-medium">$299 program</p>
+          </div>
+          <div className="rounded-xl border p-6">
+            <h4 className="font-semibold">Pre/Postnatal Training 🤰</h4>
+            <p className="mt-2 text-sm text-muted-foreground">Safe & effective training tailored to each trimester</p>
+            <p className="mt-3 text-sm font-medium">$120 per session</p>
+          </div>
         </div>
+        <p className="mt-4 text-xs text-muted-foreground">Note: In‑person prices include travel within Boston metro. Availability varies by tier. ✨</p>
       </section>
 
       {/* Testimonials */}
