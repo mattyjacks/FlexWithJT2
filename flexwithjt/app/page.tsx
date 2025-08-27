@@ -2,6 +2,7 @@
 
  import Link from "next/link";
  import React from "react";
+
  import { ThemeSwitcher } from "@/components/theme-switcher";
  import {
    Dumbbell,
@@ -60,24 +61,30 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="relative mx-auto max-w-6xl px-6 pt-16 pb-20 sm:pt-24 sm:pb-28">
-        <div className="absolute inset-0 -z-10">
-          <img
-            src="https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=1600"
-            alt="Fitness training background"
-            className="h-full w-full object-cover opacity-20"
-            loading="lazy"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/70 to-background" />
+      <section className="relative h-[100svh] w-full overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <video
+          src="/HeroBackgroundVideo.mp4"
+          className="absolute inset-0 h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto" 
+          poster={"/HeroBackgroundImage.png"} 
+          >
+          <track kind="captions" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60" />
         </div>
-        <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs text-muted-foreground">
-            <MapPin className="h-3.5 w-3.5 text-primary" /> Boston, MA
+        <div className="relative z-10 mx-auto flex h-full max-w-6xl flex-col justify-center px-6 text-white animate-in fade-in slide-in-from-bottom-4 duration-700">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/5 px-3 py-1 text-xs text-white/90">
+            <MapPin className="h-3.5 w-3.5 text-white" /> Boston, MA
           </div>
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
             Best Body = Best Life
           </h1>
-          <p className="mt-4 max-w-2xl text-muted-foreground">
+          <p className="mt-4 max-w-2xl text-white/80">
             Professional personal training in the heart of Boston. Get fit, stay motivated, and achieve your goals with JT&#39;s proven methods. 💪🔥
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -90,21 +97,21 @@ export default function Home() {
             </a>
             <a
               href="tel:+16175550123"
-              className="inline-flex items-center gap-2 rounded-md border px-5 py-3 font-medium hover:bg-accent transition"
+              className="inline-flex items-center gap-2 rounded-md border border-white/30 px-5 py-3 font-medium text-white hover:bg-white/10 transition"
             >
-              <Phone className="h-4 w-4" /> Call (617) 555-0123
+              <Phone className="h-4 w-4 text-white" /> Call (617) 555-0123
             </a>
             <Link
               href="/next"
-              className="inline-flex items-center gap-2 rounded-md border px-5 py-3 font-medium hover:bg-accent transition"
+              className="inline-flex items-center gap-2 rounded-md border border-white/30 px-5 py-3 font-medium text-white hover:bg-white/10 transition"
               aria-label="Explore Flex Next platform (coming soon)"
             >
-              Explore Flex Next <ArrowRight className="h-4 w-4" />
+              Explore Flex Next <ArrowRight className="h-4 w-4 text-white" />
             </Link>
           </div>
-          <div className="mt-8 flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
-            <div className="inline-flex items-center gap-2"><Trophy className="h-4 w-4 text-primary" /> 8+ years helping Bostonians get results</div>
-            <div className="inline-flex items-center gap-2"><Clock className="h-4 w-4 text-primary" /> Flexible scheduling: early, mid-day, evenings</div>
+          <div className="mt-8 flex flex-wrap items-center gap-6 text-sm text-white/70">
+            <div className="inline-flex items-center gap-2"><Trophy className="h-4 w-4 text-white" /> 8+ years helping Bostonians get results</div>
+            <div className="inline-flex items-center gap-2"><Clock className="h-4 w-4 text-white" /> Flexible scheduling: early, mid-day, evenings</div>
           </div>
         </div>
 
