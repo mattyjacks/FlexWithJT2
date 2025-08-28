@@ -4,6 +4,7 @@ import React, { useMemo, useState } from "react";
 import Link from "next/link";
 
 import ListingCard, { type Listing } from "@/components/shop/listing-card";
+import SiteNav from "@/components/site-nav";
 
 // Dummy merchandise (using images from /public)
 const PRODUCTS: readonly Listing[] = [
@@ -71,18 +72,6 @@ export default function ShopePage() {
 
   return (
     <main className="min-h-screen bg-background">
-      <header className="sticky top-0 z-40 border-b bg-background/70 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-          <Link href="/" className="font-bold tracking-tight text-xl">
-            Flex <span className="text-primary">With JT</span>
-          </Link>
-          <div className="flex items-center gap-3 text-sm">
-            <Link href="/next" className="hover:text-primary">Flex Next</Link>
-            <Link href="#shop" className="hover:text-primary">Shop</Link>
-          </div>
-        </div>
-      </header>
-
       <section id="shop" className="mx-auto max-w-6xl px-6 py-8">
         <div className="mb-6 flex items-end justify-between gap-4">
           <div>

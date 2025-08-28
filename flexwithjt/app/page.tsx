@@ -28,39 +28,6 @@ export default function Home() {
         <div className="absolute -bottom-40 left-[-10%] h-[460px] w-[460px] rounded-full bg-gradient-to-tr from-fuchsia-500/20 via-pink-500/10 to-rose-500/20 blur-3xl" />
       </div>
 
-      {/* Navbar */}
-      <nav className="sticky top-0 z-50 w-full border-b bg-background/70 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-          <Link href="#home" className="font-bold tracking-tight text-xl">
-            Flex <span className="text-primary">With JT</span>
-          </Link>
-          <div className="hidden items-center gap-6 md:flex text-sm">
-            <Link href="#why" className="hover:text-primary transition-colors">Why JT</Link>
-            <Link href="#about" className="hover:text-primary transition-colors">About</Link>
-            <Link href="#packages" className="hover:text-primary transition-colors">Packages</Link>
-            <Link href="#testimonials" className="hover:text-primary transition-colors">Testimonials</Link>
-            <Link href="#contact" className="hover:text-primary transition-colors">Contact</Link>
-            <Link href="/shope" className="hover:text-primary transition-colors">Shop</Link>
-            <Link href="/next" className="inline-flex items-center gap-2 rounded-full border px-3 py-1 hover:bg-accent transition-colors">
-              Flex Next <span className="text-[10px] rounded bg-amber-500/20 px-1.5 py-0.5 text-amber-700">Coming Soon</span>
-            </Link>
-          </div>
-          <div className="flex items-center gap-3">
-            <a
-              href="mailto:jt@jtfitness.com?subject=Free%20Consultation%20-%20Flex%20With%20JT"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-primary-foreground text-sm font-medium hover:opacity-90 transition"
-            >
-              Book Free Consult
-              <ArrowRight className="h-4 w-4" />
-            </a>
-            <Link href="/next" className="md:hidden inline-flex items-center gap-2 rounded-full border px-3 py-2 text-sm hover:bg-accent transition" aria-label="Flex Next mobile link">
-              Flex Next <span className="text-[10px] rounded bg-amber-500/20 px-1.5 py-0.5 text-amber-700">Soon</span>
-            </Link>
-            <ThemeSwitcher />
-          </div>
-        </div>
-      </nav>
-
       {/* Hero */}
       <section className="relative h-[100svh] w-full overflow-hidden">
         <div className="absolute inset-0 z-0">
